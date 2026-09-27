@@ -1,8 +1,8 @@
 {
-  "versionCode": 133,
+  "versionCode": 134,
   "versionName": "4.6.0",
-  "updateLog": "v133 (4.6.0) 正式版：体积减半 + 大屏适配\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n\n【1】安装包瘦身 55.6%\nAPK 14.6 MB → 6.5 MB，DEX 35.99 MB → 11.47 MB（4 dex → 2 dex）。\nR8 全量压缩 + 资源裁剪正式开启。此前曾因 Compose 接口 default 方法\n物化导致首帧崩溃而失败 6 次，新版本构建工具链已修复该根因。\n\n【2】大屏自适应（平板 / 折叠屏展开态）\nAndroid 17 起 sw≥600dp 设备忽略方向与尺寸限制。现按窗口宽度分级：\n· 手机（< 600dp）：行为完全不变\n· 平板 / 折叠屏展开（≥ 600dp）：内容居中限宽 640dp，底部导航限宽 520dp\n\n【3】编译警告清零（51 → 0）\n含 17 项废弃 API 真实迁移：BLE 新写入签名、connectGatt 新签名、\nPrimaryTabRow、hiltViewModel 新包、HiveMQ sslWithDefaultConfig、\nACTION_VIEW 安装意图等。\n\n【校验信息】\n- versionCode: 133 / versionName: 4.6.0\n- MD5: d0108781d863a3ae88a390067822f57e\n- SHA-256: 4bd658fd5fc72816f18fe6f8e128387485ea4f9acb7cc68962eda72f258cf569\n- 签名证书与历史版本一致（CN=Wuling）",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v133.apk",
+  "updateLog": "v134 (4.6.0) 正式版：版本号修正\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n本版功能与 v133 完全一致，仅修正版本号（132/133 → 134），\n用于修复已装测试版用户切到稳定通道后收不到更新的问题。\n\n【1】安装包瘦身 55.6%\nAPK 14.6 MB → 6.5 MB，DEX 35.99 MB → 11.47 MB（4 dex → 2 dex）。\nR8 全量压缩 + 资源裁剪，已通过真机验证。\n\n【2】大屏自适应（平板 / 折叠屏展开态）\nAndroid 17 起 sw≥600dp 设备忽略方向与尺寸限制。现按窗口宽度分级：\n· 手机（< 600dp）：行为完全不变\n· 平板 / 折叠屏展开（≥ 600dp）：内容居中限宽 640dp，底部导航限宽 520dp\n\n【3】编译警告清零（51 → 0）\n含 17 项废弃 API 真实迁移：BLE 新写入签名、connectGatt 新签名、\nPrimaryTabRow、hiltViewModel 新包、HiveMQ sslWithDefaultConfig、\nACTION_VIEW 安装意图等。\n\n【校验信息】\n- versionCode: 134 / versionName: 4.6.0\n- MD5: 0b4721fb44473bf60877ad445ab68037\n- SHA-256: 8bfb7bfa5243a4b011388470f2176727200c8aa97ff94e22249d57f31431f819\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v134.apk",
   "forceUpdate": false,
-  "md5": "d0108781d863a3ae88a390067822f57e"
+  "md5": "0b4721fb44473bf60877ad445ab68037"
 }
