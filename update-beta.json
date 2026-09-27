@@ -1,8 +1,8 @@
 {
-  "versionCode": 126,
-  "versionName": "4.5.0-beta6",
-  "updateLog": "v121-beta6 (4.5.0-beta6) 测试版 · 玻璃调透明度：白 0.72 → 0.50\n\n修复 beta5 反馈「不够透明」：白色覆盖从 72% 降到 50%，模糊内容透出更清晰，\n通透感对齐高德系玻璃；模糊半径 22dp 与兜底色不变。\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta6 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 126 / versionName: 4.5.0-beta6\n- MD5: 9eea850dca49efac9198229b008f1a5e",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta6.apk",
+  "versionCode": 127,
+  "versionName": "4.5.0-beta7",
+  "updateLog": "v121-beta7 (4.5.0-beta7) 测试版 · 玻璃更透：白 0.50→0.35 + 饱和度增强\n\n修复 beta6 反馈「还不够透」：浅色页面背景本就近白，50% 白 tint 叠上仍显白。\n本轮白 tint 降到 35%，并叠加饱和度增强（×1.5）——透出内容的色彩更鲜活，\n玻璃感来自「透 + 艳」，对齐高德导航栏的观感。模糊半径 22dp 不变。\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta7 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 127 / versionName: 4.5.0-beta7\n- MD5: f9687935f47abd22495ae6ab75f84b45",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta7.apk",
   "forceUpdate": false,
-  "md5": "9eea850dca49efac9198229b008f1a5e"
+  "md5": "f9687935f47abd22495ae6ab75f84b45"
 }
