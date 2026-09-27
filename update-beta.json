@@ -1,8 +1,8 @@
 {
-  "versionCode": 125,
-  "versionName": "4.5.0-beta5",
-  "updateLog": "v121-beta5 (4.5.0-beta5) 测试版 · 玻璃修复：兄弟结构 + 回退 Backdrop 输入\n\n修复 beta4 反馈：导航栏玻璃回退为不透明白色（HazeInput.Sources 源捕获为空，\n模糊层画了兜底色）。\n\n【修复】\n- 保留 beta4 的兄弟节点结构（beta2 白块的根源——源里捕获玻璃自己——已消除）\n- 模糊输入回退为 Backdrop（beta2 真机验证过能出真实模糊的路径）\n- 模糊参数不变：blur 22dp / 白 0.72 / Quality 全分辨率\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta5 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 125 / versionName: 4.5.0-beta5\n- MD5: 485978fb909767f78282d01fb05f696e",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta5.apk",
+  "versionCode": 126,
+  "versionName": "4.5.0-beta6",
+  "updateLog": "v121-beta6 (4.5.0-beta6) 测试版 · 玻璃调透明度：白 0.72 → 0.50\n\n修复 beta5 反馈「不够透明」：白色覆盖从 72% 降到 50%，模糊内容透出更清晰，\n通透感对齐高德系玻璃；模糊半径 22dp 与兜底色不变。\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta6 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 126 / versionName: 4.5.0-beta6\n- MD5: 9eea850dca49efac9198229b008f1a5e",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta6.apk",
   "forceUpdate": false,
-  "md5": "485978fb909767f78282d01fb05f696e"
+  "md5": "9eea850dca49efac9198229b008f1a5e"
 }
