@@ -1,8 +1,8 @@
 {
-  "versionCode": 130,
-  "versionName": "4.5.0-beta10",
-  "updateLog": "v121-beta10 (4.5.0-beta10) 测试版 · 导航栏改为高德式悬浮胶囊\n\n外观形态调整：导航栏从\"贴底长条\"改为\"悬浮胶囊\"——整体离开屏幕底边浮起，\n对齐高德地图底部导航的视觉形态。\n\n【改动】\n- 离底缝隙 0 → 12dp（关键：此前胶囊贴死屏幕底边，圆角感被手势条区域吃掉）\n- 圆角 30dp → 40dp（= 80dp 栏高的一半，完整胶囊圆弧）\n- 左右边距 16dp → 12dp\n- 五屏底部留白 120 → 140dp（适配胶囊浮起后的新高度）\n- 模糊参数不变：blur 22dp / 白 0.35 / 饱和度 ×1.5\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta10 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 130 / versionName: 4.5.0-beta10\n- MD5: 11d4ab3eb3ee12f29ad1577be7545d5d",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta10.apk",
+  "versionCode": 131,
+  "versionName": "4.5.0",
+  "updateLog": "v121 (4.5.0) 正式版：玻璃质感导航栏 + 依赖大升级\n\n【重要 · 包名已变更】\n本版包名变更为 com.wulingchekong.app。\n· 已装 4.5.0-beta1~beta10 的用户可直接覆盖安装\n· 停留在 v120 及更早版本的用户请【先卸载旧版再安装】，\n  安装后需重新绑定车辆 Token（新旧包名不同，无法覆盖安装）\n\n【1】玻璃质感导航栏（全新）\n底部导航改为真实背景模糊的玻璃胶囊，滚动时内容从栏下透出。\n悬浮形态：左右 12dp / 离底 12dp / 圆角 40dp 完整胶囊。\n\n【2】依赖大升级\n构建链 AGP 9.4.1 + Kotlin 2.4.20 + compileSdk 37（Android 17）；\n应用层 11 个库同步升级到最新稳定版。\n\n【3】修复下载完成瞬间闪退\n下载新版收尾时闪退（v103 起埋下的进度值竞态），本版修复。\n\n【4】修复测试版通道检测不到更新\n测试版版本清单此前未同步，现已补齐发布链路。\n\n【校验信息】\n- versionCode: 131 / versionName: 4.5.0\n- MD5: e85ea43c22d9ecefed4c31eb2011bdb2\n- SHA-256: c37a28a3fa9dbc8e02d93bdf8780eb57bf61defa57536c35a447d97435d3cb49\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121.apk",
   "forceUpdate": false,
-  "md5": "11d4ab3eb3ee12f29ad1577be7545d5d"
+  "md5": "e85ea43c22d9ecefed4c31eb2011bdb2"
 }
