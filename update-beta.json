@@ -1,8 +1,8 @@
 {
-  "versionCode": 131,
-  "versionName": "4.5.0",
-  "updateLog": "v121 (4.5.0) 正式版：玻璃质感导航栏 + 依赖大升级\n\n【重要 · 包名已变更】\n本版包名变更为 com.wulingchekong.app。\n· 已装 4.5.0-beta1~beta10 的用户可直接覆盖安装\n· 停留在 v120 及更早版本的用户请【先卸载旧版再安装】，\n  安装后需重新绑定车辆 Token（新旧包名不同，无法覆盖安装）\n\n【1】玻璃质感导航栏（全新）\n底部导航改为真实背景模糊的玻璃胶囊，滚动时内容从栏下透出。\n悬浮形态：左右 12dp / 离底 12dp / 圆角 40dp 完整胶囊。\n\n【2】依赖大升级\n构建链 AGP 9.4.1 + Kotlin 2.4.20 + compileSdk 37（Android 17）；\n应用层 11 个库同步升级到最新稳定版。\n\n【3】修复下载完成瞬间闪退\n下载新版收尾时闪退（v103 起埋下的进度值竞态），本版修复。\n\n【4】修复测试版通道检测不到更新\n测试版版本清单此前未同步，现已补齐发布链路。\n\n【校验信息】\n- versionCode: 131 / versionName: 4.5.0\n- MD5: e85ea43c22d9ecefed4c31eb2011bdb2\n- SHA-256: c37a28a3fa9dbc8e02d93bdf8780eb57bf61defa57536c35a447d97435d3cb49\n- 签名证书与历史版本一致（CN=Wuling）",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121.apk",
+  "versionCode": 132,
+  "versionName": "4.5.1",
+  "updateLog": "v132 (4.5.1) 正式版：依赖第二批升级 + Android 17 适配\n\n【升级提示】本版为维护性更新，直接覆盖安装即可，\n无需卸载重装，无需重新绑定车辆 Token。\n\n【1】targetSdk 36 → 37（Android 17 正式适配）\n已逐条核对 Android 17 全部行为变更，本项目零影响：\n· Manifest 无方向锁定（大屏限制不适用）\n· 全部走公网域名（局域网封禁不适用）\n· 小组件车图仅 64KB（限额 0.42%）\n· 零反射 / 零音频 API / 蓝牙走 GATT 非 RFCOMM\n同时获得 CT 证书透明度强制启用、原生 DCL 加固等安全默认值。\n\n【2】网络层 OkHttp 4 → 5.5.0\n底层 HTTP 引擎升级，连接池与 HTTP/2 调度更稳健。\n\n【3】图片加载 Coil 2 → 3.6.3\n图片库升级，改用 coil-network-okhttp 专用网络构件。\n\n【4】MQTT 客户端 HiveMQ 1.3.17 → 1.4.0\n车载实时消息通道同步升级。\n\n【校验信息】\n- versionCode: 132 / versionName: 4.5.1\n- MD5: f86dfef644f0b653e7c2ada96c5fb886\n- SHA-256: 3388afc19e9bff45f00d1c2a6b90845c83bb99bbf0b6efc5da8490e5fba681d0\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v132.apk",
   "forceUpdate": false,
-  "md5": "e85ea43c22d9ecefed4c31eb2011bdb2"
+  "md5": "f86dfef644f0b653e7c2ada96c5fb886"
 }
