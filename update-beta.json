@@ -1,8 +1,8 @@
 {
-  "versionCode": 128,
-  "versionName": "4.5.0-beta8",
-  "updateLog": "v121-beta8 (4.5.0-beta8) 测试版 · 修复下载完成瞬间的闪退\n\n修复真机崩溃（crash log 2026-09-27 21:13）：下载新版本收尾瞬间，\n进度条的无障碍语义重算读到已清空的进度值（null）导致闪退。\nv103 起埋下的竞态，本次改为安全读取 + 兜底 0，进度条显示逻辑不变。\n\n玻璃参数与 beta7 完全一致（白 0.35 + 饱和度增强 ×1.5），本版只修崩溃。\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta8 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 128 / versionName: 4.5.0-beta8\n- MD5: c4395e88534a60f78cf115e30ab7be37",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta8.apk",
+  "versionCode": 129,
+  "versionName": "4.5.0-beta9",
+  "updateLog": "v121-beta9 (4.5.0-beta9) 测试版 · 应用层依赖第一批升级（11 个库）\n\n长期维护性升级：把积压的应用层依赖一次性拉到最新稳定版，零 API 改动、\n零业务逻辑变更（编译一次通过）。玻璃参数与 beta8 完全一致。\n\n【升级清单】\n- core-ktx 1.15.0 → 1.19.1\n- core-splashscreen 1.0.1 → 1.2.0\n- lifecycle 2.8.7 → 2.11.0（runtime/process/viewmodel/compose 全家）\n- activity-compose 1.10.1 → 1.13.0\n- navigation-compose 2.8.5 → 2.10.2\n- hilt-navigation-compose 1.2.0 → 1.4.0\n- datastore-preferences 1.1.1 → 1.2.1\n- security-crypto 1.1.0-alpha06 → 1.1.0（脱 alpha，正式版）\n- gson 2.11.0 → 2.14.0\n- coroutines 1.9.0 → 1.11.0\n- 友盟 common 9.9.9 → 9.9.10（asms 已是 1.8.7.2）\n\n【建议重点回归】\n更新检查/下载、Token 保存（security-crypto）、页面跳转（navigation）、\n车控指令、后台保活（lifecycle）。\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta9 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 129 / versionName: 4.5.0-beta9\n- MD5: 71fd301542d3cd13ecc4c9030c6000ae",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta9.apk",
   "forceUpdate": false,
-  "md5": "c4395e88534a60f78cf115e30ab7be37"
+  "md5": "71fd301542d3cd13ecc4c9030c6000ae"
 }
