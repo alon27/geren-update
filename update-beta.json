@@ -1,8 +1,8 @@
 {
-  "versionCode": 119,
-  "versionName": "4.3.0",
-  "updateLog": "v119 (4.3.0) 界面改良第二轮：数据不装懂 / 反馈更可靠\n\n上一轮（4.2.0）把「缺数据」说清楚了，这一轮把详情页的数据口径、\n全 App 的操作反馈和深色模式可读性补齐。\n\n【1】详情页数据不再「假零」\n以前熄火后，详情页的部分数据会显示成 0°C、0 km——看起来像测到了，其实是车没上报。\n现在这些位置会明确标「未上报」；正在读取时显示呼吸灰条，拉取失败显示橙色提示。\n\n【2】详情页信息更完整\n「平均能耗」补上了单位（电车 kWh/100km、油车 L/100km）；\n充电中但功率还没读出来时，不再显示孤零零的「--」。\n\n【3】等待有说法\n能耗趋势图区域读取中会显示「正在读取能耗趋势…」，不再是一块空白里一个干转的圈。\n\n【4】没配置时知道去哪\n首次使用、还没填 Token 时，首页和详情页现在都有明确的引导按钮，\n可以直接跳到「我的」页配置，不用自己找。\n\n【5】操作反馈更可靠\n复制、分享、登录、保存等 13 处提示统一了节奏：成功提示短促不打扰，\n失败提示停留更久给足阅读时间，不再一闪而过。\n\n【6】深色模式可读性\n保活状态、更新源测速里几处在深色背景下看不清的状态文字做了提亮。\n\n【校验信息】\n- versionCode: 119 / versionName: 4.3.0（正式版，beta 通道同步）\n- MD5: 016bda0900001d3cce2a1f193451acdd\n- 签名与历史版本一致，可覆盖安装",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v119-beta.apk",
+  "versionCode": 125,
+  "versionName": "4.5.0-beta5",
+  "updateLog": "v121-beta5 (4.5.0-beta5) 测试版 · 玻璃修复：兄弟结构 + 回退 Backdrop 输入\n\n修复 beta4 反馈：导航栏玻璃回退为不透明白色（HazeInput.Sources 源捕获为空，\n模糊层画了兜底色）。\n\n【修复】\n- 保留 beta4 的兄弟节点结构（beta2 白块的根源——源里捕获玻璃自己——已消除）\n- 模糊输入回退为 Backdrop（beta2 真机验证过能出真实模糊的路径）\n- 模糊参数不变：blur 22dp / 白 0.72 / Quality 全分辨率\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta5 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 125 / versionName: 4.5.0-beta5\n- MD5: 485978fb909767f78282d01fb05f696e",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta5.apk",
   "forceUpdate": false,
-  "md5": "016bda0900001d3cce2a1f193451acdd"
+  "md5": "485978fb909767f78282d01fb05f696e"
 }
