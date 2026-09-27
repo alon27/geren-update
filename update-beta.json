@@ -1,8 +1,8 @@
 {
-  "versionCode": 129,
-  "versionName": "4.5.0-beta9",
-  "updateLog": "v121-beta9 (4.5.0-beta9) 测试版 · 应用层依赖第一批升级（11 个库）\n\n长期维护性升级：把积压的应用层依赖一次性拉到最新稳定版，零 API 改动、\n零业务逻辑变更（编译一次通过）。玻璃参数与 beta8 完全一致。\n\n【升级清单】\n- core-ktx 1.15.0 → 1.19.1\n- core-splashscreen 1.0.1 → 1.2.0\n- lifecycle 2.8.7 → 2.11.0（runtime/process/viewmodel/compose 全家）\n- activity-compose 1.10.1 → 1.13.0\n- navigation-compose 2.8.5 → 2.10.2\n- hilt-navigation-compose 1.2.0 → 1.4.0\n- datastore-preferences 1.1.1 → 1.2.1\n- security-crypto 1.1.0-alpha06 → 1.1.0（脱 alpha，正式版）\n- gson 2.11.0 → 2.14.0\n- coroutines 1.9.0 → 1.11.0\n- 友盟 common 9.9.9 → 9.9.10（asms 已是 1.8.7.2）\n\n【建议重点回归】\n更新检查/下载、Token 保存（security-crypto）、页面跳转（navigation）、\n车控指令、后台保活（lifecycle）。\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta9 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 129 / versionName: 4.5.0-beta9\n- MD5: 71fd301542d3cd13ecc4c9030c6000ae",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta9.apk",
+  "versionCode": 130,
+  "versionName": "4.5.0-beta10",
+  "updateLog": "v121-beta10 (4.5.0-beta10) 测试版 · 导航栏改为高德式悬浮胶囊\n\n外观形态调整：导航栏从\"贴底长条\"改为\"悬浮胶囊\"——整体离开屏幕底边浮起，\n对齐高德地图底部导航的视觉形态。\n\n【改动】\n- 离底缝隙 0 → 12dp（关键：此前胶囊贴死屏幕底边，圆角感被手势条区域吃掉）\n- 圆角 30dp → 40dp（= 80dp 栏高的一半，完整胶囊圆弧）\n- 左右边距 16dp → 12dp\n- 五屏底部留白 120 → 140dp（适配胶囊浮起后的新高度）\n- 模糊参数不变：blur 22dp / 白 0.35 / 饱和度 ×1.5\n\n【注意 · 包名已变更】\n- 本轮测试版起包名变更为 com.wulingchekong.app（全新应用）\n- beta1-beta10 之间可直接覆盖安装\n- 从正式版 v120 及更早（旧包名 com.open.wuling）无法覆盖安装：\n  请先卸载旧版再安装，需重新绑定 Token\n\n【校验信息】\n- versionCode: 130 / versionName: 4.5.0-beta10\n- MD5: 11d4ab3eb3ee12f29ad1577be7545d5d",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v121-beta10.apk",
   "forceUpdate": false,
-  "md5": "71fd301542d3cd13ecc4c9030c6000ae"
+  "md5": "11d4ab3eb3ee12f29ad1577be7545d5d"
 }
