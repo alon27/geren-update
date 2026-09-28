@@ -1,8 +1,8 @@
 {
-  "versionCode": 134,
-  "versionName": "4.6.0",
-  "updateLog": "v134 (4.6.0) 正式版：版本号修正\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n本版功能与 v133 完全一致，仅修正版本号（132/133 → 134），\n用于修复已装测试版用户切到稳定通道后收不到更新的问题。\n\n【1】安装包瘦身 55.6%\nAPK 14.6 MB → 6.5 MB，DEX 35.99 MB → 11.47 MB（4 dex → 2 dex）。\nR8 全量压缩 + 资源裁剪，已通过真机验证。\n\n【2】大屏自适应（平板 / 折叠屏展开态）\nAndroid 17 起 sw≥600dp 设备忽略方向与尺寸限制。现按窗口宽度分级：\n· 手机（< 600dp）：行为完全不变\n· 平板 / 折叠屏展开（≥ 600dp）：内容居中限宽 640dp，底部导航限宽 520dp\n\n【3】编译警告清零（51 → 0）\n含 17 项废弃 API 真实迁移：BLE 新写入签名、connectGatt 新签名、\nPrimaryTabRow、hiltViewModel 新包、HiveMQ sslWithDefaultConfig、\nACTION_VIEW 安装意图等。\n\n【校验信息】\n- versionCode: 134 / versionName: 4.6.0\n- MD5: 0b4721fb44473bf60877ad445ab68037\n- SHA-256: 8bfb7bfa5243a4b011388470f2176727200c8aa97ff94e22249d57f31431f819\n- 签名证书与历史版本一致（CN=Wuling）",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v134.apk",
+  "versionCode": 135,
+  "versionName": "4.6.1",
+  "updateLog": "v135 (4.6.1) 正式版：后台自动刷新降频\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n\n【1】修复后台持续轮询\n此前 30 秒定频轮询在退到后台/锁屏后仍持续发送请求，只有退出登录才停止，\n属实打实的待机耗电。现改为两档：\n· 前台：30 秒（不变）\n· 后台 / 锁屏：5 分钟（降频而非停止，兼顾省电与数据新鲜度）\n用 ProcessLifecycleOwner 判定前后台（Activity lifecycle 会因旋转/主题切换\n导致重建而误判）；回到前台时立即补一次刷新，不会看到滞后数据。\n\n【2】依赖清理\n移除 2 个零引用依赖（core-splashscreen、security-crypto），\n并首次启用长期闲置的 lifecycle-process。\n\n【校验信息】\n- versionCode: 135 / versionName: 4.6.1\n- MD5: 7cdcb6bf36a0c98b5fdcdab505760186\n- SHA-256: e1e84eb0f026779fba06735501806e3cb020e87a1bf6df69c3734774d1099b38\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v135.apk",
   "forceUpdate": false,
-  "md5": "0b4721fb44473bf60877ad445ab68037"
+  "md5": "7cdcb6bf36a0c98b5fdcdab505760186"
 }
