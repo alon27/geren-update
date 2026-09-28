@@ -1,8 +1,8 @@
 {
-  "versionCode": 138,
-  "versionName": "4.8.1",
-  "updateLog": "v138 (4.8.1) 正式版：修复路网消失回归\n\n【重要修复】\nv137 会导致地图上的道路全部消失（只剩街区色块，无法判断怎么走）。\n\n【根因】\nv137 添加的 map.setFeatures(['bg','building','point']) 漏了 'road'，\n而该 API 是白名单语义 —— 未列出的要素会被关闭，\n导致路网与道路名被整体关闭。\n\n【修复】\n· 移除 setFeatures 调用（回到默认全要素），而非补上 road\n· 暗色样式改为在 mapOptions 中传入，消除与初始瓦片的时序竞争\n  （原先的 setMapStyle 时机可能造成色块错位）\n\n【保留】v137 的其他改进全部保留\n· 深色底图 / 内嵌矢量标记 / 复位正北 / 平滑移动 / 缩放分级等\n\n【校验信息】\n- versionCode: 138 / versionName: 4.8.1\n- MD5: 8bbb0cf64f2bdeeba8f57706f89d2adc\n- SHA-256: 13ce76fc1698319d7f10ce85a3bf093c36551907e90a304039284ed8363d3bb4\n- 签名证书与历史版本一致（CN=Wuling）",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v138.apk",
+  "versionCode": 139,
+  "versionName": "4.8.2",
+  "updateLog": "v139 (4.8.2) 正式版：NFC 指定动作 + 充电功率显示修复\n\n【新增】\n· NFC 标签可指定单一动作：绑定时可选「只解锁 / 只锁车 / 切换」\n  - 只解锁：适合家门口贴一张，走近就开门（不管当前什么状态都只解锁）\n  - 只锁车：适合车里/包里贴一张，离开就锁\n  - 切换：碰一下在解锁/锁车之间切换（与旧版行为一致）\n  - 已绑定的旧标签无需重新绑定，行为保持不变\n\n【修复】\n· 充电功率百千瓦级被误判为单位瓦：120.4kW 快充此前显示成 0.1 kW\n  判据由 100 修正为 1000（kW 制下乘用车真实功率 3~350，W 制下至少数千）\n\n【优化】\n· 首页快捷控制区改为 5 列 x 2 行，补齐「闪灯」「鸣笛」入口\n· 鸣笛需二次确认（深夜扰民），闪灯一点即执行\n· 能耗链路 11 处静默异常补全日志，便于排查数据缺失\n\n【内部】\n· 建立单元测试网 155 个（原先 0）\n\n【校验信息】\n- versionCode: 139 / versionName: 4.8.2\n- MD5: ae73a9faabac073fb6206267cdc1fdbc\n- SHA-256: 5538b6ead49d7b4b2683352fc9bff7348282b16b623e9edf4902ba20c85778b9\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v139.apk",
   "forceUpdate": false,
-  "md5": "8bbb0cf64f2bdeeba8f57706f89d2adc"
+  "md5": "ae73a9faabac073fb6206267cdc1fdbc"
 }
