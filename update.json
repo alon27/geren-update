@@ -1,8 +1,8 @@
 {
-  "versionCode": 135,
-  "versionName": "4.6.1",
-  "updateLog": "v135 (4.6.1) 正式版：后台自动刷新降频\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n\n【1】修复后台持续轮询\n此前 30 秒定频轮询在退到后台/锁屏后仍持续发送请求，只有退出登录才停止，\n属实打实的待机耗电。现改为两档：\n· 前台：30 秒（不变）\n· 后台 / 锁屏：5 分钟（降频而非停止，兼顾省电与数据新鲜度）\n用 ProcessLifecycleOwner 判定前后台（Activity lifecycle 会因旋转/主题切换\n导致重建而误判）；回到前台时立即补一次刷新，不会看到滞后数据。\n\n【2】依赖清理\n移除 2 个零引用依赖（core-splashscreen、security-crypto），\n并首次启用长期闲置的 lifecycle-process。\n\n【校验信息】\n- versionCode: 135 / versionName: 4.6.1\n- MD5: 7cdcb6bf36a0c98b5fdcdab505760186\n- SHA-256: e1e84eb0f026779fba06735501806e3cb020e87a1bf6df69c3734774d1099b38\n- 签名证书与历史版本一致（CN=Wuling）",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v135.apk",
+  "versionCode": 136,
+  "versionName": "4.7.0",
+  "updateLog": "v136 (4.7.0) 正式版：交互体验优化四连\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n\n【S1】反馈出口收口\nAppState 内直接 Toast 调用收口到 Feedback 封装，统一时长与文案口径。\n\n【S2】全局 Snackbar\n命令结果与错误提示从「仅首页可见」提升到全局——此前详情页有\n「立即锁车」「一键关窗」按钮，点了却页面零反馈（提示弹在首页）。\n· 新增 consumeCommandResult()，消除切 Tab 时的跨页幽灵提示\n· 修复 Snackbar 被悬浮导航胶囊压住下半截\n\n【S3】车控按钮执行态与防连点\n10 个控车按钮新增「禁用 + 内联转圈 + 文案省略号」。\n车控指令非幂等，重复下发是真实的多一次动作（如车锁电机反复动作）。\n· 执行态用按命令维度的新状态，不复用含后台轮询的全局 isLoading\n· 用 AtomicReference CAS 防并发双放行\n· finally 释放执行权，避免失败路径按钮永久卡死\n\n【S4】数据时效信号补全\nFreshnessBar 从 2 页扩展到全部 4 页：\n· 位置页：时效条上移到车辆名称下方（找车时时效比坐标更关键）\n· 我的页：顶部车辆卡新增时效胶囊\n· 详情页：新增「高频刷新中」说明（本页 5 秒一轮 vs 首页 30 秒一轮）\n\n【校验信息】\n- versionCode: 136 / versionName: 4.7.0\n- MD5: 8df7433b0663da390329db238239217f\n- SHA-256: 7e43f7eaee7a8002e7cd911062d59edc142a1a2aedf9d0a73b3c05accdd8e973\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v136.apk",
   "forceUpdate": false,
-  "md5": "7cdcb6bf36a0c98b5fdcdab505760186"
+  "md5": "8df7433b0663da390329db238239217f"
 }
