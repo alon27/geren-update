@@ -1,8 +1,8 @@
 {
-  "versionCode": 136,
-  "versionName": "4.7.0",
-  "updateLog": "v136 (4.7.0) 正式版：交互体验优化四连\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n\n【S1】反馈出口收口\nAppState 内直接 Toast 调用收口到 Feedback 封装，统一时长与文案口径。\n\n【S2】全局 Snackbar\n命令结果与错误提示从「仅首页可见」提升到全局——此前详情页有\n「立即锁车」「一键关窗」按钮，点了却页面零反馈（提示弹在首页）。\n· 新增 consumeCommandResult()，消除切 Tab 时的跨页幽灵提示\n· 修复 Snackbar 被悬浮导航胶囊压住下半截\n\n【S3】车控按钮执行态与防连点\n10 个控车按钮新增「禁用 + 内联转圈 + 文案省略号」。\n车控指令非幂等，重复下发是真实的多一次动作（如车锁电机反复动作）。\n· 执行态用按命令维度的新状态，不复用含后台轮询的全局 isLoading\n· 用 AtomicReference CAS 防并发双放行\n· finally 释放执行权，避免失败路径按钮永久卡死\n\n【S4】数据时效信号补全\nFreshnessBar 从 2 页扩展到全部 4 页：\n· 位置页：时效条上移到车辆名称下方（找车时时效比坐标更关键）\n· 我的页：顶部车辆卡新增时效胶囊\n· 详情页：新增「高频刷新中」说明（本页 5 秒一轮 vs 首页 30 秒一轮）\n\n【校验信息】\n- versionCode: 136 / versionName: 4.7.0\n- MD5: 8df7433b0663da390329db238239217f\n- SHA-256: 7e43f7eaee7a8002e7cd911062d59edc142a1a2aedf9d0a73b3c05accdd8e973\n- 签名证书与历史版本一致（CN=Wuling）",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v136.apk",
+  "versionCode": 137,
+  "versionName": "4.8.0",
+  "updateLog": "v137 (4.8.0) 正式版：地图 3D 增强与深色适配\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n\n【五项问题修复】\n· 深色模式：地图底图随主题切换（此前始终亮白，与深色界面割裂）\n· 加载遮罩：去掉硬编码白色，改跟随主题\n· 复位正北：新增按钮，3D 旋转后一键回正（此前只能退出重进）\n· 标记点：外链图片改内嵌矢量图标，断网也不消失，颜色随主题\n· 全屏地图：显式指定俯仰角，缩放提升到 17 级\n\n【3D 能力增强】\n· 楼块要素显式声明，立体楼块稳定生效\n· 车辆位置变化时标记平滑移动，地图不再整张重建闪烁\n\n【隐藏问题修复】\n· 修复 3D 探测日志因变量从未赋值而一直空转的问题\n\n【校验信息】\n- versionCode: 137 / versionName: 4.8.0\n- MD5: 67796f9f99c177cef2ffdb76667797cf\n- SHA-256: be3d4eaf84cb1040aad4446156debd6de734347e1e25c1ba258ba3d8b569c7c2\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v137.apk",
   "forceUpdate": false,
-  "md5": "8df7433b0663da390329db238239217f"
+  "md5": "67796f9f99c177cef2ffdb76667797cf"
 }
