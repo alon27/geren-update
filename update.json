@@ -1,8 +1,8 @@
 {
-  "versionCode": 137,
-  "versionName": "4.8.0",
-  "updateLog": "v137 (4.8.0) 正式版：地图 3D 增强与深色适配\n\n【升级提示】直接覆盖安装即可，无需卸载重装，无需重新绑定车辆 Token。\n\n【五项问题修复】\n· 深色模式：地图底图随主题切换（此前始终亮白，与深色界面割裂）\n· 加载遮罩：去掉硬编码白色，改跟随主题\n· 复位正北：新增按钮，3D 旋转后一键回正（此前只能退出重进）\n· 标记点：外链图片改内嵌矢量图标，断网也不消失，颜色随主题\n· 全屏地图：显式指定俯仰角，缩放提升到 17 级\n\n【3D 能力增强】\n· 楼块要素显式声明，立体楼块稳定生效\n· 车辆位置变化时标记平滑移动，地图不再整张重建闪烁\n\n【隐藏问题修复】\n· 修复 3D 探测日志因变量从未赋值而一直空转的问题\n\n【校验信息】\n- versionCode: 137 / versionName: 4.8.0\n- MD5: 67796f9f99c177cef2ffdb76667797cf\n- SHA-256: be3d4eaf84cb1040aad4446156debd6de734347e1e25c1ba258ba3d8b569c7c2\n- 签名证书与历史版本一致（CN=Wuling）",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v137.apk",
+  "versionCode": 138,
+  "versionName": "4.8.1",
+  "updateLog": "v138 (4.8.1) 正式版：修复路网消失回归\n\n【重要修复】\nv137 会导致地图上的道路全部消失（只剩街区色块，无法判断怎么走）。\n\n【根因】\nv137 添加的 map.setFeatures(['bg','building','point']) 漏了 'road'，\n而该 API 是白名单语义 —— 未列出的要素会被关闭，\n导致路网与道路名被整体关闭。\n\n【修复】\n· 移除 setFeatures 调用（回到默认全要素），而非补上 road\n· 暗色样式改为在 mapOptions 中传入，消除与初始瓦片的时序竞争\n  （原先的 setMapStyle 时机可能造成色块错位）\n\n【保留】v137 的其他改进全部保留\n· 深色底图 / 内嵌矢量标记 / 复位正北 / 平滑移动 / 缩放分级等\n\n【校验信息】\n- versionCode: 138 / versionName: 4.8.1\n- MD5: 8bbb0cf64f2bdeeba8f57706f89d2adc\n- SHA-256: 13ce76fc1698319d7f10ce85a3bf093c36551907e90a304039284ed8363d3bb4\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v138.apk",
   "forceUpdate": false,
-  "md5": "67796f9f99c177cef2ffdb76667797cf"
+  "md5": "8bbb0cf64f2bdeeba8f57706f89d2adc"
 }
