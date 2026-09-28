@@ -21,18 +21,25 @@ on:
         required: true
         type: string
       asset:
-        description: '要挂载的 APK 路径（仓库内相对路径）'
-        required: false
-        default: 'wuling-assistant.apk'
+        description: '要挂载的 APK 路径（仓库内相对路径）。必填——不再有默认值，避免误挂无版本号旧包'
+        required: true
+        default: ''
         type: string
       asset_name:
         description: '挂载后的附件名（默认取源文件名）'
         required: false
         default: ''
         type: string
-  push:
-    tags:
-      - 'v*'
+  # ⚠️ 2026-09-28 已移除 push tag 自动触发。
+  #
+  # 原触发器（push tags: v*）会在每次打 tag 时，把仓库根目录的
+  # wuling-assistant.apk —— 一个无版本号的、2026-09-21 时代的旧包（16,870,701 B）
+  # ——自动挂到刚发布的 Release 上。
+  #
+  # 后果：v27~v136 共 71 个 Release 全部多挂了这个同名旧包，用户可能误下载到
+  # 数个月前的版本。清理了 3 次都复发，直到锁定是本 workflow 的自动触发所致。
+  #
+  # 现在只保留手动派发（workflow_dispatch），并且要求显式指定 asset 路径。
 
 permissions:
   contents: write
@@ -71,6 +78,11 @@ jobs:
           echo "源文件       : $SRC"
           echo "附件名       : $NAME"
           test -f "$SRC" || { echo "::error::源文件不存在: $SRC"; exit 1; }
+          # 守卫：拒绝挂载无版本号的附件名（历史 bug 根因，见文件头部说明）
+          if [ "$NAME" = "wuling-assistant.apk" ]; then
+            echo "::error::拒绝挂载无版本号的附件名 $NAME —— 请用 wuling-assistant-v<版本>.apk"
+            exit 1
+          fi
           ls -la "$SRC"
           sha256sum "$SRC"
           # 同名附件已存在时覆盖，避免重跑冲突
