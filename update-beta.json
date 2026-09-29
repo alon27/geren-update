@@ -1,8 +1,8 @@
 {
-  "versionCode": 143,
-  "versionName": "4.9.0",
-  "updateLog": "v143 (4.9.0) 正式版：新增邮箱意见反馈\n\n【新增】\n· 「意见反馈」入口（我的 -> 隐私与诊断，以及「关于我们」里也有一处）\n· 分「功能建议」和「问题反馈」两类，主题自动带 [功能建议] / [问题反馈] 前缀\n· 反馈「问题反馈」时会自动附带运行日志与崩溃记录，不用自己导出\n· 日志发送前自动脱敏（Token、手机号、VIN 等替换为 ***）\n· 正文自动带机型、系统版本、App 版本\n· 提供「复制邮箱地址」，不想用邮件 App 时可手动联系\n\n【说明】\n· 反馈内容仅通过邮件直接发送，不上传任何统计平台\n· 附件勾选框默认打开，可随时取消\n\n【内部】\n· 新增 12 个单测（主题/正文/附件名构造），测试总数 190 -> 202\n\n【校验信息】\n- versionCode: 143 / versionName: 4.9.0\n- MD5: 086f255b09ad8efda598c94ce8827de1\n- SHA-256: 387d69408071a78028802ffc673d1b710b934029b46011537956ee2122213e11\n- 签名证书与历史版本一致（CN=Wuling）",
-  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v143.apk",
+  "versionCode": 144,
+  "versionName": "4.9.1",
+  "updateLog": "v144 (4.9.1) 正式版：反馈一键直传\n\n【优化】\n· 意见反馈改为 App 内直接提交：点「发送」即完成，不再跳转系统选择器\n· 日志与崩溃记录直接写进反馈正文，无需下载附件即可查看\n· 提交失败时内容原样保留，可改用邮件或复制留存\n· 描述为空不再允许提交；提交中按钮禁用，防止重复提交\n\n【隐私】\n· 日志在设备本地完成脱敏（Token、手机号、VIN 等替换为 ***）\n· 反馈内容不上传任何统计平台\n\n【内部】\n· 修复上一版邮件候选查询的 action 不匹配缺陷\n· 降级邮件路径改用 setSelector（限定邮件客户端且保留附件能力）\n· 新增 18 个单测，测试总数 202 -> 220\n\n【校验信息】\n- versionCode: 144 / versionName: 4.9.1\n- MD5: 4906aef1c2e5d98f6d52770b58ea6c23\n- SHA-256: 3d500a1a6f1f37585f8ddc36ff153c0925fccaa45fa2b72ab7e96431ce89d69f\n- 签名证书与历史版本一致（CN=Wuling）",
+  "apkUrl": "https://cn-nb2.rains3.com/dump/wuling-assistant-v144.apk",
   "forceUpdate": false,
-  "md5": "086f255b09ad8efda598c94ce8827de1"
+  "md5": "4906aef1c2e5d98f6d52770b58ea6c23"
 }
