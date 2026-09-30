@@ -1,12 +1,12 @@
-# 五菱车控
+# 50车控
 
-> 面向 **Android 16** 的五菱车联网第三方客户端，附带桌面小组件、能耗统计与 App 内自动更新。
+> 面向 **Android 16** 的50车联网第三方客户端，附带桌面小组件、能耗统计与 App 内自动更新。
 
 [![最新版本](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fedgeone.gh-proxy.org%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2Fdaiyuxiang520%2Fgeren-update%2Fmain%2Fupdate.json&query=%24.versionName&label=最新版本&color=blue)](https://github.com/daiyuxiang520/geren-update/releases/latest)
 [![Android](https://img.shields.io/badge/Android-16%20(targetSdk%2036)-green)]()
 [![包名](https://img.shields.io/badge/包名-com.wuling.app.repack-orange)]()
 
-**五菱车控**是一款面向 Android 16（API 36）的五菱车联网客户端，独立包名 `com.wuling.app.repack`，基于官方接口重新实现，**无需安装官方 App 即可单独使用**。它适合官方 App 出现兼容性故障、或你想要更顺手的车控与能耗统计时使用。无广告，登录凭据经系统级加密后仅保存在本机。
+**50车控**是一款面向 Android 16（API 36）的50车联网客户端，独立包名 `com.wuling.app.repack`，基于官方接口重新实现，**无需安装官方 App 即可单独使用**。它适合官方 App 出现兼容性故障、或你想要更顺手的车控与能耗统计时使用。无广告，登录凭据经系统级加密后仅保存在本机。
 
 ## 目录
 
@@ -192,9 +192,9 @@ export WULING_KEY_PASSWORD=your_key_password
 | **v46** | 「我的」页车辆卡点击弹出完整车辆信息弹层 |
 | **v45** | 首次启动弹出隐私政策，同意前不初始化采集 SDK |
 | **v44** | 「我的」页车辆图与首页对齐，手机号改大标题显示 |
-| **v43** | 命名统一为「五菱车控」 |
+| **v43** | 命名统一为「50车控」 |
 | **v42** | 「我的」页车辆信息卡层级调整 |
-| **v41** | 更换启动图标；应用名由占位名改为「五菱车控」 |
+| **v41** | 更换启动图标；应用名由占位名改为「50车控」 |
 
 </details>
 
@@ -202,7 +202,7 @@ export WULING_KEY_PASSWORD=your_key_password
 
 ## 免责声明
 
-- 本项目为**个人学习与研究**用途的第三方客户端，**非五菱官方发布**，与上汽通用五菱无任何关联。
+- 本项目为**个人学习与研究**用途的第三方客户端，**非50官方发布**，与上汽通用50无任何关联。
 - 车辆数据均通过官方 API 获取。为支持登录态持久化与自动重登，应用将登录凭据（手机号、密码）经 **AndroidKeyStore 加密后仅存于本机**，**不上传任何第三方服务器**；车辆数据同样不上传。加密凭据仅在当前设备可用，清除应用数据或卸载即失效。集成的友盟+统计仅采集设备维度匿名数据（可构建时留空 `wuling.umeng.appkey` 关闭）。
 - 请遵守相关服务条款，**使用风险自负**；建议仅在自有车辆上使用。如涉及侵权，请联系删除。
 
